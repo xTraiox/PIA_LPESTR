@@ -34,7 +34,7 @@ string obtenerFechaHora() {
 void cargarDatos(vector<Alumno> &alumnos) {
     ifstream f("alumnos.txt");
     if (!f.is_open()) {
-        cout << "No existe alumnos.txt, se creará automáticamente.\n";
+        cout << "No existe alumnos.txt, se creara automaticamente.\n";
         return;
     }
 
@@ -176,11 +176,11 @@ void eliminarAlumno(vector<Alumno> &alumnos) {
 // ─────────────────────────────────────────────
 void ordenarAlumnos(vector<Alumno> &alumnos) {
     int op;
-    cout << "\n--- ORDENAR ALUMNOS ---\n";
-    cout << "1. Por matrícula\n";
+    cout << "\nORDENAR ALUMNOS\n";
+    cout << "1. Por matricula\n";
     cout << "2. Por nombre\n";
     cout << "3. Por promedio\n";
-    cout << "Opción: ";
+    cout << "Opcion: ";
     cin >> op;
 
     switch (op) {
@@ -200,7 +200,7 @@ void ordenarAlumnos(vector<Alumno> &alumnos) {
         break;
 
     default:
-        cout << "Opción inválida.\n";
+        cout << "Opcion invalida.\n";
         return;
     }
 
@@ -241,14 +241,14 @@ void exportarTop3(const vector<Alumno> &alumnos) {
 void menuAlumnos(vector<Alumno> &alumnos) {
     int op;
     do {
-        cout << "\n===== MENU ALUMNOS =====\n";
+        cout << "\nMENU ALUMNOS\n";
         cout << "1. Agregar alumno\n";
         cout << "2. Leer alumno\n";
         cout << "3. Modificar alumno\n";
         cout << "4. Eliminar alumno\n";
         cout << "5. Ordenar alumnos\n";
         cout << "0. Volver\n";
-        cout << "Opción: ";
+        cout << "Opcion: ";
         cin >> op;
 
         switch(op) {
@@ -268,7 +268,7 @@ void menuAlumnos(vector<Alumno> &alumnos) {
 void menuReportes(const vector<Alumno> &alumnos) {
     int op;
     do {
-        cout << "\n===== MENU REPORTES =====\n";
+        cout << "\nMENU REPORTES\n";
         cout << "1. Buscar alumno\n";
         cout << "2. Exportar Top 3\n";
         cout << "0. Volver\n";
@@ -296,7 +296,7 @@ int main() {
         cout << "1. Menu Alumnos\n";
         cout << "2. Menu Reportes\n";
         cout << "0. Salir\n";
-        cout << "Opción: ";
+        cout << "Opcion: ";
         cin >> op;
 
         switch(op) {
