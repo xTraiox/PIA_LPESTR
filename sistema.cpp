@@ -34,7 +34,7 @@ string obtenerFechaHora() {
 void cargarDatos(vector<Alumno> &alumnos) {
     ifstream f("alumnos.txt");
     if (!f.is_open()) {
-        cout << "⚠ No existe alumnos.txt, se creará automáticamente.\n";
+        cout << "No existe alumnos.txt, se creará automáticamente.\n";
         return;
     }
 
@@ -143,7 +143,7 @@ void modificarAlumno(vector<Alumno> &alumnos) {
             a.fechaModificacion = obtenerFechaHora();
 
             guardarDatos(alumnos);
-            cout << "✔ Alumno modificado.\n";
+            cout << "Alumno modificado.\n";
             return;
         }
     }
@@ -223,7 +223,7 @@ void exportarTop3(const vector<Alumno> &alumnos) {
          [](Alumno a, Alumno b) { return a.final > b.final; });
 
     ofstream out("top3.txt");
-    out << "=== TOP 3 ALUMNOS ===\n\n";
+    out << "TOP 3 ALUMNOS\n\n";
 
     for (int i = 0; i < 3 && i < copia.size(); i++) {
         out << i+1 << ". " << copia[i].nombre
@@ -236,8 +236,8 @@ void exportarTop3(const vector<Alumno> &alumnos) {
 }
 
 // ─────────────────────────────────────────────
-//                 Menú alumnos
-// ─────────────────────────────────────────────
+//                 Menu alumnos
+// ──────────────────────────────────────────
 void menuAlumnos(vector<Alumno> &alumnos) {
     int op;
     do {
@@ -263,8 +263,8 @@ void menuAlumnos(vector<Alumno> &alumnos) {
 }
 
 // ─────────────────────────────────────────────
-//                 Menú reportes
-// ─────────────────────────────────────────────
+//                 Menu reportes
+// ───────────────────────────────────────────
 void menuReportes(const vector<Alumno> &alumnos) {
     int op;
     do {
@@ -283,9 +283,9 @@ void menuReportes(const vector<Alumno> &alumnos) {
     } while (op != 0);
 }
 
-// ─────────────────────────────────────────────
+// ────────────────────────────────────
 //                    MAIN
-// ─────────────────────────────────────────────
+// ──────────────────────────────────────────
 int main() {
     vector<Alumno> alumnos;
     cargarDatos(alumnos);
